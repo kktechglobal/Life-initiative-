@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Reach Initiative</title>
+
+<style>
+    
+    
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    color:#222222;
+}
+
+/* Header */
+header{
+    background:#0F4C5C;
+    color:#FFFFFF;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8px;
+}
+
+nav a{
+    color:#FFFFFF;
+    text-decoration:none;
+    margin:0 12px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#2ECC71;
+    text-decoration:underline;
+}
+
+.service-link{
+    background:#2ECC71;
+    padding:6px 12px;
+    border-radius:4px;
+}
+
+.service-link:hover{
+    background:#27AE60;
+    color:white;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(rgba(15,76,92,0.8), rgba(15,76,92,0.8)),
+    url('https://images.unsplash.com/photo-1509099836639-18ba1795216d');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:30px;
+}
+
+.hero .btn-primary{
+    margin-top:10px;
+    display:inline-block;
+}
+
+
+
+/* Sections */
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.light{
+    background:#F4F7F8;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary{
+    background:#2ECC71;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+
+.btn-primary:hover{
+    background:#27AE60;
+}
+
+.btn-secondary{
+    background:#0F4C5C;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+
+.btn-secondary:hover{
+    opacity:0.8;
+}
+
+
+
+/* CAC Certificate Section */
+.cac-section{
+    background:#F5F9FC;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.cac-section h2{
+    color:#0B3C5D;
+    margin-bottom:15px;
+}
+
+.cac-section p{
+    margin-bottom:30px;
+    font-size:16px;
+}
+
+.cac-image-container img{
+    max-width:90%;
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.cac-image-container img:hover{
+    transform:scale(1.02);
+}
+
+
+
+
+/* Testimonies */
+.testimony-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.testimony{
+    background:#F4F7F8;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    font-style:italic;
+    transition:0.3s;
+}
+
+.testimony:hover{
+    transform:translateY(-5px);
+}
+
+.testimony h4{
+    margin-top:15px;
+    font-style:normal;
+    color:#0F4C5C;
+}
+
+
+
+/* Section Title Styling */
+.section-title{
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+/* Improved Card Layout */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:20px;
+}
+
+/* Card Improvements */
+.card{
+    background:white;
+    padding:30px 25px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0F4C5C;
+}
+
+.card p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* Hover Effect */
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* Highlight Exam Support Card */
+.highlight-card{
+    border:2px solid #2ECC71;
+}
+
+/* Button Inside Card */
+.card-btn{
+    margin-top:10px;
+    display:inline-block;
+}
+
+h3 .btn-primary{
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+
+/* Footer */
+footer{
+    background:#0F4C5C;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+.hamburger{
+    display:none;
+    font-size:20px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0F4C5C;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
+    
+    
+    /* Donation Section */
+.donate-text{
+    max-width:600px;
+    margin:20px auto 40px;
+}
+
+.donation-options{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.donation-box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.donation-box:hover{
+    transform:translateY(-5px);
+}
+
+.donation-box h3{
+    margin-bottom:15px;
+    color:#0F4C5C;
+}
+
+.donation-box p{
+    margin-bottom: 15px;
+}
+
+.donation-box .btn-secondary{
+    margin-top: 20px;
+    padding: 12px 25px;
+}
+
+
+/* Pay Button */
+.pay-btn{
+    background:#1E90FF;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.pay-btn:hover{
+    background:#0B3C5D;
+}
+
+/* Popup Background */
+.payment-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+/* Popup Box */
+.payment-box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:90%;
+    max-width:400px;
+    text-align:center;
+    position:relative;
+}
+
+.payment-box h3{
+    color:#0B3C5D;
+    margin-bottom:20px;
+}
+
+.confirm-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.confirm-btn:hover{
+    background:#1da851;
+}
+
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+
+
+
+/* Total Raised */
+.total-raised{
+    font-size:20px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#0B3C5D;
+}
+
+/* Table Styling */
+.tracker-box{
+    max-width:900px;
+    margin:20px auto 0;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+th, td{
+    padding:12px 10px;
+    border:1px solid #ccc;
+}
+
+th{
+    background:#0B3C5D;
+    color:white;
+}
+
+td{
+    background:white;
+}
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>LIFE REACH INITIATIVE</h2>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#focus">Focus Areas</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+    
+    </nav>
+</header>
+
+
+<section id="home" class="hero">
+    <h1>Reaching Lives. Transforming Communities.</h1>
+    <p>Life Reach Initiative is committed to environmental sustainability, youth empowerment, and community development across Nigeria.</p>
+    
+<div class="support-btn">
+    <h3>
+        
+<a href="#support-our-mission" class="btn-primary">Support Our Mission</a>
+    </h3>
+</div>
+
+       <h3> <a href="cleanworks.html" class="service-link">Request For Cleaning Services</a>
+       </h3>
+</section>
+
+<section id="about" class="section light">
+    <h2>About Us</h2>
+    <p>
+        Life Reach Initiative is a non-governmental organisation focused on creating lasting
+        social impact through environmental sanitation campaigns, skill development programs,
+        and youth empowerment initiatives. We believe clean communities build healthy futures.
+    </p>
+    
+    
+    <section class="cac-section">
+    <h2>Official Registration</h2>
+    <p>Life Reach Initiative is a fully registered NGO. Here’s our CAC Certificate:</p>
+
+    <div class="cac-image-container">
+        <img src="images/cac-certificate.jpg" alt="Life Reach Initiative CAC Certificate">
+    </div>
+</section>
+
+</section>
+
+
+
+
+<section id="focus" class="section">
+    <h2 class="section-title">Our Focus Areas</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Environmental Sanitation</h3>
+            <p>
+                Organising community clean-up exercises and promoting proper waste management
+                for healthier neighborhoods.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Youth Empowerment</h3>
+            <p>
+                Training young people in professional cleaning and facility management skills
+                to create employment opportunities.
+            </p>
+        </div>
+
+        <div class="card highlight-card">
+            <h3>Student Exam Registration Support</h3>
+            <p>
+                We assist students with WAEC, NECO, and JAMB registration,
+                providing guidance and ensuring smooth academic progress.
+            </p>
+          <li><a href="https://wa.me/2347040276067?text=Hello%20Life%20Reach%20Initiative,%20I%20need%20help%20with%20exam%20registration."
+   target="_blank"
+   class="btn-primary">
+   Get Help Now
+</a>
+</li>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section id="impact" class="section light">
+    <h2>Our Impact</h2>
+    <p>
+        Through partnerships and outreach programs, Life Reach Initiative has contributed
+        to cleaner neighborhoods, employment opportunities for youths, and increased awareness
+        about environmental responsibility.
+    </p>
+    
+</section>
+
+
+
+<section id="testimonies" class="section">
+    <h2>What People Say About Us</h2>
+
+    <div class="testimony-container">
+
+        <div class="testimony">
+            <p>
+                "Life Reach Initiative organised a clean-up exercise in our area and
+                it transformed the environment completely."
+            </p>
+            <h4>- Community Leader, Lagos</h4>
+        </div>
+
+        <div class="testimony">
+            <p>
+                "I received training through this initiative and now work in facility
+                management. It changed my life."
+            </p>
+            <h4>- Youth Beneficiary</h4>
+        </div>
+
+        <div class="testimony">
+            <p>
+                "Their dedication to environmental sustainability is inspiring."
+            </p>
+            <h4>- Volunteer</h4>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="donate" class="section light">
+    <h2>Support Our Mission</h2>
+    <p class="donate-text">
+        Your donation helps us support students with exam registration,
+        empower youths, and organise community sanitation programs.
+    </p>
+
+    <div class="donation-options">
+
+        <div class="donation-box">
+            <h3>Online Payment</h3>
+            <p>You can make secure payments using your debit card.</p>
+          <button class="pay-btn" onclick="openPayment()">
+   Pay online 
+</button>
+
+
+<!-- Payment Popup -->
+<div class="payment-overlay" id="paymentPopup">
+   <div class="payment-box">
+       <span class="close-btn" onclick="closePayment()">&times;</span>
+       <h3>Make a Donation</h3>
+
+       <p><strong>Bank Name:</strong> Opay</p>
+       <p><strong>Account Name:</strong> Life Reach Initiative</p>
+       <p><strong>Account Number:</strong> 7040276067</p>
+
+       <p style="margin-top:15px;">
+       After payment, kindly send proof via WhatsApp for confirmation.
+       </p>
+
+       <a href="https://wa.me/2347040276067?text=Hello%20I%20have%20made%20a%20donation%20to%20Life%20Reach%20Initiative."
+          target="_blank"
+          class="confirm-btn">
+          Send Proof on WhatsApp
+       </a>
+   </div>
+</div>
+
+
+        
+
+        <div class="donation-box">
+            <p>Need assistance with donation?</p>
+            <a href="https://wa.me/2347040276067?text=Hello%20Life%20Reach%20Initiative,%20I%20want%20to%20assist."
+   target="_blank"
+   class="btn-primary">
+   Contact Us</a>
+</div>
+    </div>
+</section>
+
+
+
+
+
+
+<section id="contact" class="section light">
+    <h2>Contact Us</h2>
+    <p>Email: info@lifereachinitiative.org</p>
+    <p>Enugu, Nigeria</p>
+</section>
+
+
+
+
+<section class="donation-tracker-section">
+    <h2>Donation & Account Tracker</h2>
+    <p>Track donations received and expenses made by Life Reach Initiative.</p>
+
+    <!-- Total Amount Raised -->
+    <div class="total-raised">
+        Total Donations: ₦<span id="totalDonations">0</span>
+    </div>
+
+    <div class="tracker-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Donor / Recipient</th>
+                    <th>Credit (₦)</th>
+                    <th>Debit (₦)</th>
+                    <th>Reason</th>
+                    <th>Payment Method</th>
+                </tr>
+            </thead>
+            <tbody id="trackerBody">
+                <!-- Records will appear here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <p>© 2026 Life Reach Initiative. All Rights Reserved.</p>
+</footer>
+
+<script>
+    
+    
+  function toggleMenu(){
+    const nav = document.getElementById("navMenu");
+
+    if(nav.style.display === "flex"){
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+}  
+    
+    
+    
+</script>
+
+<script>
+function openPayment(){
+    document.getElementById("paymentPopup").style.display = "flex";
+}
+
+function closePayment(){
+    document.getElementById("paymentPopup").style.display = "none";
+}
+</script>
+
+<script>
+// Example donation and expense records
+const records = [
+    {date:"2026-03-01", name:"John Doe", credit:5000, debit:0, reason:"Donation", method:"Bank Transfer"},
+    {date:"2026-03-02", name:"Jane Smith", credit:10000, debit:0, reason:"Donation", method:"Paystack"},
+    {date:"2026-03-03", name:"Office Supplies", credit:0, debit:2000, reason:"Purchased cleaning supplies", method:"Bank Transfer"},
+    {date:"2026-03-04", name:"Mike Johnson", credit:2000, debit:0, reason:"Donation", method:"Bank Transfer"},
+    {date:"2026-03-05", name:"Community Event", credit:0, debit:3000, reason:"Event catering & materials", method:"Bank Transfer"}
+];
+
+// Populate table and calculate total donations
+const trackerBody = document.getElementById("trackerBody");
+let totalDonations = 0;
+
+records.forEach(record => {
+    totalDonations += record.credit; // Only credits count toward total donations
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${record.date}</td>
+        <td>${record.name}</td>
+        <td>${record.credit > 0 ? record.credit.toLocaleString() : ""}</td>
+        <td>${record.debit > 0 ? record.debit.toLocaleString() : ""}</td>
+        <td>${record.reason}</td>
+        <td>${record.method}</td>
+    `;
+    trackerBody.appendChild(row);
+});
+
+// Update total donations
+document.getElementById("totalDonations").textContent = totalDonations.toLocaleString();
+</script>
+
+
+</body>
+</html>
